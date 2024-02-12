@@ -47,3 +47,25 @@ datastore = { "medical":[
 
       ]
 }
+
+outfile = open('retail_space.csv', 'w')
+outfile.write('room-number,use,sq-ft,price')
+
+for i in datastore['medical']:
+    outfile.write(f"{i['room-number']},{i['use']},{i['sq-ft']},{i['price']}\n")
+
+outfile.close()
+
+#list_of_rooms = datastore['medical']
+
+#d is dictionary
+#for d in list_of_rooms:
+    #outfile.write()
+#print header
+#print('room-number,use,sq-ft,price')
+
+#print data
+#for i in datastore['medical']:
+    #print(f"{i['room-number']},{i['use']},{i['sq-ft']},{i['price']}")
+    
+    
